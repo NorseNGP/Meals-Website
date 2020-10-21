@@ -1,0 +1,44 @@
+@import 'additional';
+
+*{
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+}
+header{
+    height: 100vh;
+    width:100%;
+    background: url("../img/header_bg.jpeg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    .header-content{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color:#fff;
+        z-index: 10;
+        h1{
+            font-size: calc(26px + 2.5vw);
+            margin-bottom: 1em;
+            font-weight: 700;
+            font-family: 'Merriweather',sans-serif;
+        }
+        button{
+            padding: 12px 32px;
+            border:1px solid #fff;
+            background: none;
+            color:#fff;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: .4s;
+            cursor: pointer;
+            &:hover{
+                background: #fff;
+                color:#1f1f1f;
+            }
+        }
+    }
+}

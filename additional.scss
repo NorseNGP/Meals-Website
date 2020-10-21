@@ -1,0 +1,448 @@
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.container-smaller {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+
+    .row-center {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: stretch;
+
+        .entry-item {
+            padding: 4em 2em;
+            width: 33.33%;
+            text-align: center;
+            background: #fff;
+
+            .food-subheading {
+                color: #e84118;
+                font-size: 1.2em;
+                font-weight: 300;
+            }
+
+            .food-heading {
+                padding-bottom: 1em;
+                font-size: 2em;
+            }
+
+            .food-desc {
+                color: #353b48;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.2em;
+                padding: 1em;
+            }
+
+            a {
+                display: block;
+                padding: 1em;
+                font-size: 1.1em;
+                text-decoration: none;
+                color: #1d1d1d;
+
+                span i {
+                    font-size: 0.7em;
+                    transition: .3s;
+                }
+
+                &:hover span i {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .entry-bg1 {
+            background: url("../img/entry_food_1.webp") no-repeat center;
+            background-size: cover;
+        }
+
+        .entry-bg2 {
+            background: url("../img/entry_food_2.webp") no-repeat center;
+            background-size: cover;
+        }
+
+        .entry-bg3 {
+            background: url("../img/entry_food_3.webp") no-repeat center;
+            background-size: cover;
+        }
+
+
+
+        .chef-item {
+            width: 50%;
+            padding: 2em;
+            text-align: center;
+
+            img {
+                margin: 0 auto;
+                border-radius: 50%;
+                width: 200px;
+            }
+
+            .chef-name {
+                font-size: 2.5em;
+                font-weight: 300;
+                padding: 0.5em 0;
+            }
+
+            .chef-role {
+                text-transform: uppercase;
+                font-size: 1.2em;
+                color: #353b48;
+                font-weight: 300;
+            }
+
+            .chef-description {
+                padding: 1em 0;
+                font-size: 1.2em;
+                font-family: 'Open Sans', sans-serif;
+
+            }
+
+            .social-icons i {
+                cursor: pointer;
+                padding-top: 1em;
+                color: #e84118;
+                font-size: 1.2em;
+                margin: 0 5px;
+            }
+        }
+
+    }
+}
+
+section {
+    padding: 4em 0;
+}
+
+.section-gray {
+    background: #f8f9fa;
+}
+
+.section-heading {
+    font-size: 3em;
+    padding: 1em;
+    text-align: center;
+    font-weight: 300;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1.25em;
+    padding: 0 1em 1em 3em;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: gray;
+}
+
+.menu-filter ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        padding: 0 1em;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 1.4em;
+            color: #353b48;
+            text-transform: uppercase;
+            padding: 0.5em;
+        }
+
+        a.active {
+            color: #e84118;
+            border-bottom: 2px solid #e84118
+        }
+    }
+}
+
+.filter-result {
+    display: none;
+}
+
+.filter-result.filter-result-active {
+    display: flex;
+    flex-direction: column;
+    animation: appear 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    .food-info {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(197, 197, 197);
+        padding: 1em;
+
+        img {
+            width: 100px;
+            border-radius: 20px;
+        }
+
+        .food-info-desc {
+            text-align: left;
+            padding: 2em;
+
+            .menu-food-item {
+                font-family: 'Merriweather', sans-serif;
+                font-weight: 300;
+            }
+
+            .food-desc {
+                font-family: 'Open Sans', sans-serif;
+            }
+        }
+
+        .menu-food-item-price {
+            color: #e84118;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+    }
+}
+
+.flex-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    .row {
+        text-align: center;
+        flex-basis: 33%;
+
+    }
+
+    .flex-services-item {
+        display: flex;
+        flex-direction: column;
+        padding: 3em;
+
+        i {
+            font-size: 3em;
+        }
+
+        .service-name {
+            padding: 2em 0;
+            font-family: 'Merriweather', sans-serif;
+            font-weight: 300;
+            font-size: 1.4em;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2em;
+            color: #353b48;
+        }
+    }
+}
+
+.reservation-section {
+    padding-bottom: 200px;
+}
+
+.reservation-section form {
+    input[type=submit] {
+        cursor: pointer;
+        padding: 12px 48px;
+        display: block;
+        margin: 3em auto;
+        text-transform: uppercase;
+        border: 2px solid #e84118;
+        background: #fff;
+        color: #e84118;
+        border-radius: 5px;
+        letter-spacing: 4px;
+        transition: .3s;
+
+        &:hover {
+            background: #e84118;
+            color: #fff;
+        }
+    }
+
+    .form-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        .form-group {
+            flex-basis: 30%;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+
+            label {
+                padding: 10px 0;
+                font-family: 'Merriweather', sans-serif;
+                font-weight: 300;
+            }
+
+            input {
+                padding: 6px;
+                border: 2px solid rgb(197, 197, 197);
+                border-radius: 5px;
+                transition: .3s;
+                outline: none;
+
+                &:focus {
+                    border: 2px solid #e84118;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: #1d1d1d;
+    color: #fff;
+
+    h2 {
+        text-align: center;
+        font-size: 3em;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        letter-spacing: 4px;
+        padding: 3em 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 400px;
+        border: 0;
+    }
+}
+
+@media(max-width:1000px) {
+    .section-heading {
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    .sub-heading {
+        font-size: 1em;
+    }
+
+    .flex-column .row-center .entry-bg1,
+    .flex-column .row-center .entry-bg2,
+    .flex-column .row-center .entry-bg3 {
+        display: none;
+    }
+
+    .flex-column .row-center {
+        flex-direction: column;
+    }
+
+    .flex-column .row-center .entry-item {
+        word-wrap: break-word;
+        padding: 2em 0;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .flex-column .row-center .chef-item {
+        width: 100%;
+        padding: 2em 0;
+
+        .chef-description {
+            font-size: 1em;
+        }
+    }
+
+    .filter-result.filter-result-active .food-info {
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: none;
+        padding: 1em;
+
+        .food-info-desc {
+            padding: 0;
+            margin: 1em 0;
+        }
+    }
+
+    .flex-services {
+        flex-direction: column;
+
+        .flex-services-item {
+            padding: 1em;
+
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+@media(max-width:640px) {
+
+    .menu-filter ul {
+        flex-direction: column;
+
+        li {
+            margin: 20px 0;
+
+            a {
+                font-size: 1.2em;
+            }
+        }
+
+    }
+
+    .flex-services {
+        .flex-services-item p {
+            font-size: 1em;
+        }
+    }
+
+    .reservation-section form .form-content .form-group {
+        flex-basis: 90%;
+    }
+
+    .reservation-section form input[type=submit] {
+        padding: 12px 24px;
+    }
+
+    footer {
+        padding: 1em 0;
+
+        h2 {
+            font-size: 2em;
+            padding: 2em 1em;
+        }
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
